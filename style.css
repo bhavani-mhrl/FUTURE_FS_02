@@ -1,0 +1,164 @@
+:root {
+    --primary-color: #d63384; /* Pink */
+    --secondary-color: #198754; /* Green */
+    --light-bg: #f8f9fa;
+    --dark-text: #212529;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: var(--dark-text);
+    background-color: var(--light-bg);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, .navbar-brand {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Navbar Styling */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background-color: #fff;
+}
+.navbar-brand {
+    color: var(--primary-color) !important;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+.nav-link {
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-color);
+}
+
+
+.hero-section {
+    /* The background image URL */
+    background-image: url('https://images.unsplash.com/photo-1468327768560-75b778cbb551?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+
+    /* Ensures the image covers the entire section without stretching weirdly */
+    background-size: cover;
+
+    /* Centers the image focus point */
+    background-position: center;
+
+    /* Prevents the image from repeating */
+    background-repeat: no-repeat;
+
+    /* Optional: Dark overlay to make text pop (black with 40% transparency) */
+    background-color: rgba(0, 0, 0, 0.4); 
+    background-blend-mode: multiply;
+
+    /* Layout settings */
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6); /* Added extra shadow for better readability */
+}
+
+    /* Features Section */
+    .feature-icon {
+        font-size: 2.5rem;
+        color: var(--secondary-color);
+        margin-bottom: 1rem;
+    }
+
+    /* Product Card */
+    .product-card {
+        transition: transform 0.3s, box-shadow 0.3s;
+        border: none;
+        border-radius: 15px;
+        overflow: hidden;
+        background: white;
+        height: 100%;
+    }
+    .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .card-img-wrapper {
+        height: 250px;
+        overflow: hidden;
+        position: relative;
+    }
+    .card-img-top {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s;
+    }
+    .product-card:hover .card-img-top {
+        transform: scale(1.05);
+    }
+    .price-tag {
+        font-size: 1.25rem;
+        color: var(--primary-color);
+        font-weight: 700;
+    }
+
+    /* Buttons */
+    .btn-pink {
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        padding: 10px 20px;
+    }
+    .btn-pink:hover {
+        background-color: #b02a6c;
+        color: white;
+    }
+    
+    .btn-outline-pink {
+        border: 2px solid var(--primary-color);
+        color: var(--primary-color);
+    }
+    .btn-outline-pink:hover, .btn-outline-pink.active {
+        background-color: var(--primary-color);
+        color: white;
+    }
+
+    /* Footer */
+    footer {
+        background-color: #333;
+        color: white;
+        padding: 3rem 0;
+        margin-top: 4rem;
+    }
+    footer p{
+        color: white;
+    }
+    footer a {
+        color: #ddd;
+        text-decoration: none;
+    }
+    footer a:hover {
+        color: var(--primary-color);
+    }
+
+    /* Loader */
+    #loader {
+        display: none;
+        justify-content: center;
+        padding: 3rem;
+    }
+
+    /* Toast Container */
+    .toast-container {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1100;
+    }
