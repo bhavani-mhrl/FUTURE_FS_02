@@ -1,14 +1,14 @@
   // --- 1. MOCK DATA & API SERVICE ---
         // In a real scenario, this would be a database.
         const flowersData = [
-            { id: 1, name: "Red Rose Bouquet", category: "Rose", price: 45.00, image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", description: "Classic deep red roses symbolizing love and passion. Perfect for anniversaries." },
-            { id: 2, name: "White Lily Arrangement", category: "Lily", price: 55.00, image: "https://images.unsplash.com/photo-1520763185298-1b434c919102?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", description: "Elegant white lilies with a subtle fragrance, representing purity and refined beauty." },
-            { id: 3, name: "Pink Tulip Bunch", category: "Tulip", price: 30.00, image: "https://images.unsplash.com/photo-1520763185298-1b434c919102?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", description: "Fresh spring pink tulips that bring cheer to any room." },
-            { id: 4, name: "Purple Orchid", category: "Orchid", price: 65.00, image: "https://images.unsplash.com/photo-1566873535350-a3f5d4a804b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", description: "Exquisite purple orchid in a ceramic pot. Long-lasting and sophisticated." },
-            { id: 5, name: "Sunflower Joy", category: "Sunflower", price: 25.00, image: "https://images.unsplash.com/photo-1551731409-43eb3e517a1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", description: "Bright and sunny sunflowers to brighten up someone's day instantly." },
-            { id: 6, name: "Yellow Roses", category: "Rose", price: 40.00, image: "https://images.unsplash.com/photo-1599733589046-1c7121a56166?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", description: "Friendship and joy embodied in these stunning yellow roses." },
-            { id: 7, name: "Mixed Spring Bouquet", category: "Tulip", price: 35.00, image: "https://images.unsplash.com/photo-1490750967868-58cb75069ed6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", description: "A colorful mix of seasonal tulips, daffodils, and hyacinths." },
-            { id: 8, name: "White Phalaenopsis", category: "Orchid", price: 70.00, image: "https://images.unsplash.com/photo-1610397648930-477b8c7f0943?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", description: "The classic white moth orchid, a symbol of rare beauty." },
+            { id: 1, name: "Red Rose Bouquet", category: "Rose", price: 45.00, image: "https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=600&q=80", description: "Classic deep red roses symbolizing love and passion. Perfect for anniversaries." },
+            { id: 2, name: "White Lily Arrangement", category: "Lily", price: 55.00, image: "https://images.unsplash.com/photo-1567359781514-3b926c86fb9f?w=600&q=80", description: "Elegant white lilies with a subtle fragrance, representing purity and refined beauty." },
+            { id: 3, name: "Pink Tulip Bunch", category: "Tulip", price: 30.00, image: "https://images.unsplash.com/photo-1520763185298-1b434c919102?w=600&q=80", description: "Fresh spring pink tulips that bring cheer to any room." },
+            { id: 4, name: "Purple Orchid", category: "Orchid", price: 65.00, image: "https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=600&q=80", description: "Exquisite purple orchid in a ceramic pot. Long-lasting and sophisticated." },
+            { id: 5, name: "Sunflower Joy", category: "Sunflower", price: 25.00, image: "https://images.unsplash.com/photo-1580706383485-3bbfd8f7bb09?w=600&q=80", description: "Bright and sunny sunflowers to brighten up someone's day instantly." },
+            { id: 6, name: "Yellow Roses", category: "Rose", price: 40.00, image: "https://images.unsplash.com/photo-1599733589046-1c7121a56166?w=600&q=80", description: "Friendship and joy embodied in these stunning yellow roses." },
+            { id: 7, name: "Mixed Spring Bouquet", category: "Tulip", price: 35.00, image: "https://images.unsplash.com/photo-1490750967868-58cb75069ed6?w=600&q=80", description: "A colorful mix of seasonal tulips, daffodils, and hyacinths." },
+            { id: 8, name: "White Phalaenopsis", category: "Orchid", price: 70.00, image: "https://images.unsplash.com/photo-1595704289529-ce8b101ada41?w=600&q=80", description: "The classic white moth orchid, a symbol of rare beauty." },
         ];
 
         // Simulating an Async API Call
@@ -72,7 +72,7 @@
                 col.innerHTML = `
                     <div class="card product-card h-100">
                         <div class="card-img-wrapper">
-                            <img src="${flower.image}" class="card-img-top" alt="${flower.name}">
+                            <img src="${flower.image}" class="card-img-top" alt="${flower.name}" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27100%25%27 height=%27100%25%27%3E%3Crect fill=%27%23e0e0e0%27 width=%27100%25%27 height=%27100%25%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 font-size=%2724%27 fill=%27%23999%27 text-anchor=%27middle%27 dominant-baseline=%27middle%27%3EImage Not Available%3C/text%3E%3C/svg%3E'">
                         </div>
                         <div class="card-body d-flex flex-column">
                             <div class="mb-2">
@@ -170,7 +170,7 @@
                 itemEl.innerHTML = `
                     <div class="row g-0 align-items-center">
                         <div class="col-3 p-2">
-                            <img src="${item.image}" class="img-fluid rounded" alt="${item.name}">
+                            <img src="${item.image}" class="img-fluid rounded" alt="${item.name}" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27100%25%27 height=%27100%25%27%3E%3Crect fill=%27%23e0e0e0%27 width=%27100%25%27 height=%27100%25%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 font-size=%2712%27 fill=%27%23999%27 text-anchor=%27middle%27 dominant-baseline=%27middle%27%3ENo Image%3C/text%3E%3C/svg%3E'">
                         </div>
                         <div class="col-9">
                             <div class="card-body py-2">
@@ -211,7 +211,7 @@
             
             modalContent.innerHTML = `
                 <div class="col-md-6">
-                    <img src="${product.image}" class="img-fluid rounded-start w-100" style="object-fit: cover; height: 400px;" alt="${product.name}">
+                    <img src="${product.image}" class="img-fluid rounded-start w-100" style="object-fit: cover; height: 400px;" alt="${product.name}" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27100%25%27 height=%27100%25%27%3E%3Crect fill=%27%23e0e0e0%27 width=%27100%25%27 height=%27100%25%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 font-size=%2724%27 fill=%27%23999%27 text-anchor=%27middle%27 dominant-baseline=%27middle%27%3EImage Not Available%3C/text%3E%3C/svg%3E'">
                 </div>
                 <div class="col-md-6">
                     <div class="p-4">
